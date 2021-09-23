@@ -1,0 +1,61 @@
+*.foreground:   #C6C6C6
+*.background:   #1C1C1C
+*.cursorColor:  #444444
+
+!  black 236 238
+*.color0:  #303030
+*.color8:  #444444
+
+!  red 167
+*.color1:  #D75F5F
+*.color9:  #D75F5F
+
+!  green 108
+*.color2:  #87AF87
+*.color10: #87AF87
+
+!  yellow 221
+*.color3:  #FFD75F
+*.color11: #FFD75F
+
+!  blue 110
+*.color4:  #87AFD7
+*.color12: #87AFD7
+
+!  magenta 146
+*.color5:  #AFAFD7
+*.color13: #AFAFD7
+
+!  cyan 75
+*.color6:  #AFD7FF
+*.color14: #AFD7FF
+
+!  white 239 15
+*.color7:  #E4E4E4
+*.color15: #FFFFFF
+
+URxvt*font:  xft:DejaVuSansMono:size=14:antialias=true
+URxvt*borderLess:  false
+URxvt*externalBorder: 0
+URxvt*internalBorder: 4
+URxvt*scrollBar: false
+URxvt*saveLines: 5000
+
+!  Tabs
+URxvt*perl-ext-common:  default,tabbedex
+
+URxvt*keysym.Control-Shift-N: perl:tabbedex:new_tab
+URxvt*keysym.Control-Shift-K: perl:tabbedex:next_tab
+URxvt*keysym.Control-Shift-J: perl:tabbedex:prev_tab
+
+URxvt*keysym.Control-Shift-R: perl:tabbedex:rename_tab
+URxvt*keysym.Control-Shift-H: perl.tabbedex:move_tab_left
+URxvt*keysym.Control-Shift-L: perl.tabbedex:move_tab_right
+
+URxvt*tabbedex.tabbar-fg:  15
+URxvt*tabbedex.tabbar-bg:  236
+URxvt*tabbedex.tab-fg:  110
+URxvt*tabbedex.tab-bg:  236
+
+URxvt*tabbedex.transparent:true
+URxvt*tabbedex.new-button: false
