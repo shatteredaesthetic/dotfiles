@@ -1,0 +1,5 @@
+alias ccc="clear"
+alias ll="ls -lah"
+alias gast="git add . && git status"
+alias d="dirs -v"
+for index ({1..9}) alias "$index"="cd +${index}"; unset index

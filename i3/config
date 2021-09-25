@@ -17,7 +17,7 @@ font pango:monospace 8
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-#font pango:DejaVu Sans Mono 8
+font pango:Inconsolata Nerd Font 12
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
@@ -162,7 +162,7 @@ mode "$mode_system" {
     bindsym Escape mode "default"
 }
 
-bindsym $mod+Backspace mode "$mode_system"
+bindsym $mod+BackSpace mode "$mode_system"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -201,13 +201,13 @@ bar {
 	colors {
 	    background $black2
 	    statusline $white2
-	    seperator $white2
-	    #                  border      background  text
-	    focused_workspace  $background $background $red1
-	    active_workspace   $black2     $black1     $white2
-	    inactive_workspace $black1     $black2     $foreground
-	    urgent_workspace   $red1       $red1       $white2
-	    binding_mode       $background $red2       $white2
+	    separator $white2
+	    #                      border      background  text
+	    focused_workspace      $background $background $red1
+	    active_workspace       $black2     $black1     $white2
+	    inactive_workspace     $black1     $black2     $foreground
+	    urgent_workspace       $red1       $red1       $white2
+	    binding_mode_indicator $background $red2       $white2
 	}
 }
 
@@ -219,7 +219,7 @@ set $i3lockwall sh ~/.config/i3/scripts/lock.sh
 bindsym $mod+CTRL+Shift+l exec --no-startup-id $i3lockwall
 
 # set wallpaper
-exec --no-startup-id feh --no-fehbg --bg-fill ~/.config/i3/feh/bkgnd_ghosts.jpg
+exec --no-startup-id feh --no-fehbg --bg-fill ~/.config/i3/feh/bkgnd_streetlamps.jpg
 
 # floating pop up automatically
 for_window [window_role="pop-up"] floating enable
@@ -293,3 +293,6 @@ exec urxvtc -name urxvt_scratchpad
 for_window [instance="htop_scratchpad"] move to scratchpad, border none
 bindsym $mod+Shift+p [instance="htop_scratchpad"] scratchpad show
 exec urxvtc -name htop_scratchpad -e htop
+
+# start dunst
+exec --no-startup-id dunst
